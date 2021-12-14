@@ -41,4 +41,35 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the role that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
+
+    /**
+     * Get the payrollBranch that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function payrollBranch()
+    {
+        return $this->belongsTo(Branch::class, 'payroll_branch');
+    }
+    
+
+    /**
+     * The accessBranch that belong to the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function accessBranches()
+    {
+        return $this->belongsToMany(Branch::class, 'branch_access_user', 'user_id', 'branch_id');
+    }
 }
