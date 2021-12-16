@@ -19,6 +19,8 @@ class CreateBranchCapitalsTable extends Migration
             $table->date('capital_date');
             $table->double('capital_amount')->default(0);
             $table->text('description')->nullable();
+            $table->string('capital_type')->default('deposit');
+            $table->string('status')->default('completed');
             $table->timestamps();
         });
     }

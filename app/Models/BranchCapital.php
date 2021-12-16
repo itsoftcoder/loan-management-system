@@ -22,4 +22,15 @@ class BranchCapital extends Model
     {
         return $this->belongsTo(Branch::class, 'branch_id');
     }
+
+
+    public function ScopeIsDeposit($query){
+        return $query->where('capital_type','deposit');
+    }
+
+    public function ScopeIsWithdrawal($query){
+        return $query->where('capital_type','withdrawal');
+    }
+
+   
 }

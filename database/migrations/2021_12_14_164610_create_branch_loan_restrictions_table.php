@@ -18,8 +18,8 @@ class CreateBranchLoanRestrictionsTable extends Migration
             $table->foreignId('branch_id')->constrained('branches')->onUpdate('cascade')->onDelete('cascade');
             $table->double('minimum_loan_amount')->default(100);
             $table->double('maximum_loan_amount')->default(1000000);
-            $table->integer('minimum_intarest_rate')->default(2);
-            $table->integer('maximum_intarest_rate')->default(50);
+            $table->integer('minimum_interest_rate')->default(2);
+            $table->integer('maximum_interest_rate')->default(50);
             $table->timestamps();
         });
     }

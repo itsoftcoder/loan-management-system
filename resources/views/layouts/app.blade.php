@@ -12,13 +12,13 @@
 @stack('styles')
 
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini dark-mode">
 <!-- Site wrapper -->
 <div class="wrapper">
  
     @include('includes.header')
 
-@include('includes.sidebar')
+    @include('includes.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

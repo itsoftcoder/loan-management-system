@@ -41,16 +41,7 @@
                with font-awesome or any other icon font library -->
           
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Branch #1
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="{{ route('branch.index') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Home Branch
