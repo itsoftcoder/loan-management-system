@@ -15,7 +15,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Branch List Page</h1>
+                    <h1>{{ trans('branch.title') }}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -33,9 +33,9 @@
 @section('content')
     <div class="card">
         <div class="card-header clearfix">
-            <h3 class="card-title float-left align-middle my-0">Branch Table</h3>
+            <h3 class="card-title float-left align-middle my-0">{{ trans('branch.sub_title') }}</h3>
             <a href="{{ route('branch.create') }}" class="btn btn-xs btn-secondary float-right"><i
-                    class="fa fa-plus"></i> Create New Branch</a>
+                    class="fa fa-plus"></i> {{ trans('branch.create_button') }}</a>
         </div>
         <!-- /.card-header -->
         <div class="card-body">

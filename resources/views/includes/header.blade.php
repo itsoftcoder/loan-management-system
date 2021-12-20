@@ -37,7 +37,25 @@
         </div>
       </li>
 
-      <!-- Messages Dropdown Menu -->
+      
+      <li class="nav-item dropdown">
+        {{-- <form> --}}
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-flag"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="?locale=bn" class="dropdown-item {{ Request::get('locale') == 'bn' ? 'active' : '' }}">
+            Bangla 
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="?locale=en" class="dropdown-item {{ Request::get('locale') == 'en' ? 'active' : '' }}">
+            English
+          </a>
+        {{-- </form>   --}}
+        </div>
+      </li>
+
+<!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
